@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_uint.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laroges <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 18:05:51 by laroges           #+#    #+#             */
+/*   Updated: 2023/08/30 18:41:32 by laroges          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static void	ft_fill_ui(unsigned int res)
@@ -18,7 +30,7 @@ static int	ft_uintlen(unsigned int res)
 	len = 0;
 	while (res > 0)
 	{
-		len++;
+		len ++;
 		res /= 10;
 	}
 	return (len);
@@ -29,7 +41,6 @@ int	ft_print_uint(int args)
 	unsigned int	res;
 
 	res = 0;
-
 	if (args == 0)
 	{
 		ft_putchar('0');

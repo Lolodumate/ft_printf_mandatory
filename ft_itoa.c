@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laroges <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 16:18:00 by laroges           #+#    #+#             */
+/*   Updated: 2023/08/30 19:00:20 by laroges          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_sign(int n)
@@ -24,7 +36,7 @@ static size_t	ft_longlen(long long n)
 	return (len);
 }
 
-char	*ft_fill_int_in_str(char *str, long long n, size_t len, size_t i)
+static char	*ft_fill_int_in_str(char *str, long long n, size_t len, size_t i)
 {
 	while (len > i)
 	{
@@ -37,9 +49,9 @@ char	*ft_fill_int_in_str(char *str, long long n, size_t len, size_t i)
 
 char	*ft_itoa(int n)
 {
-	size_t			len;
+	size_t		len;
 	long long	long_n;
-	char	*str;
+	char		*str;
 
 	long_n = n;
 	len = ft_longlen(n) + ft_sign(long_n);

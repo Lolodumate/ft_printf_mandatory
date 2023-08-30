@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laroges <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 14:31:13 by laroges           #+#    #+#             */
+/*   Updated: 2023/08/30 18:49:49 by laroges          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include "libft.h"
@@ -6,11 +18,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_tab
+typedef struct s_tab
 {
 	va_list	args;
-	int	index;
-	int	conversion;
+	int		index;
+	int		conversion;
 }	t_tab;
 
 int			ft_printf(const char *format, ...);
@@ -25,6 +37,6 @@ int			ft_print_uint(int args);
 int			ft_intlen(int n);
 void		ft_putchar(char c);
 void		ft_putstr(char *str);
-t_tab	*ft_init(t_tab *init);
+t_tab		*ft_init(t_tab *init);
 
 #endif

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_hexa.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laroges <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 16:36:26 by laroges           #+#    #+#             */
+/*   Updated: 2023/08/30 18:47:41 by laroges          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_hexalen(unsigned int hexa)
 {
 	int	len;
-	
+
 	len = 0;
 	if (hexa == 0)
 		len = 1;
@@ -14,7 +26,6 @@ static int	ft_hexalen(unsigned int hexa)
 	}
 	return (len);
 }
-
 
 static void	ft_puthexa(unsigned int hexa, char c)
 {
